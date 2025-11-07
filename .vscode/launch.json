@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:TheEntertainmentDatabase}",
+            "name": "Debug TheEntertainmentDatabase",
+            "target": "TheEntertainmentDatabase",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug TheEntertainmentDatabase"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:TheEntertainmentDatabase}",
+            "name": "Release TheEntertainmentDatabase",
+            "target": "TheEntertainmentDatabase",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release TheEntertainmentDatabase"
+        }
+    ]
+}
