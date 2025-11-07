@@ -1,0 +1,28 @@
+name: Swift
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+jobs:
+  swift:
+    name: Swift
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v5.0.0
+    - name: Setup Cache
+      uses: actions/cache@v4.3.0
+      with:
+        path: .build
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
+    - name: Build
+      run: swift build
+    - name: Run tests
+      run: swift test
