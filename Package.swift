@@ -7,16 +7,13 @@ let package = Package(
         .macOS(.v13)
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.0"),
-        .package(url: "https://github.com/apple/swift-nio.git", exact: "2.88.0"),
+        .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.0")
     ],
     targets: [
         .executableTarget(
             name: "TheEntertainmentDatabase",
             dependencies: [
-                .product(name: "Vapor", package: "vapor"),
-                .product(name: "NIOCore", package: "swift-nio"),
-                .product(name: "NIOPosix", package: "swift-nio"),
+                .product(name: "Vapor", package: "vapor")
             ],
             swiftSettings: swiftSettings
         ),
