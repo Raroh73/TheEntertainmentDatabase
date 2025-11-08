@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "TheEntertainmentDatabase",
     platforms: [
-       .macOS(.v13)
+        .macOS(.v13)
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.0"),
@@ -27,10 +27,8 @@ let package = Package(
                 .product(name: "VaporTesting", package: "vapor"),
             ],
             swiftSettings: swiftSettings
-        )
+        ),
     ]
 )
 
-var swiftSettings: [SwiftSetting] { [
-    .enableUpcomingFeature("ExistentialAny"),
-] }
+var swiftSettings: [SwiftSetting] { [.enableUpcomingFeature("ExistentialAny")] }
