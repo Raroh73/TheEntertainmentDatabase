@@ -7,13 +7,17 @@ let package = Package(
         .macOS(.v13)
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.0")
+        .package(url: "https://github.com/vapor/fluent.git", exact: "4.13.0"),
+        .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", exact: "4.8.1"),
+        .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.0"),
     ],
     targets: [
         .executableTarget(
             name: "TheEntertainmentDatabase",
             dependencies: [
-                .product(name: "Vapor", package: "vapor")
+                .product(name: "Fluent", package: "fluent"),
+                .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
+                .product(name: "Vapor", package: "vapor"),
             ],
             swiftSettings: swiftSettings
         ),
