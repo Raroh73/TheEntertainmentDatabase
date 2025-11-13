@@ -5,6 +5,7 @@ import Vapor
 
 public func configure(_ app: Application) async throws {
     app.databases.use(.sqlite(.file("database.sqlite")), as: .sqlite)
+    app.migrations.add(CreateMovies())
     try await app.autoMigrate()
 
     app.views.use(.leaf)
