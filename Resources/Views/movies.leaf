@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        #for(movie in movies):
+            <tr>
+                <td>#(movie.title)</td>
+                <td>#(movie.year)</td>
+                <td>#(movie.description)</td>
+            </tr>
+        #endfor
+    </tbody>
+</table>
