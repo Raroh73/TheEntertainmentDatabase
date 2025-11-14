@@ -1,6 +1,7 @@
 import Fluent
+import Vapor
 
-final class Movie: Model, @unchecked Sendable {
+final class Movie: Content, Model, @unchecked Sendable {
     static let schema = "movies"
 
     @ID(key: .id)
