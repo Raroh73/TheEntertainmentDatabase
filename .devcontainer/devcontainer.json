@@ -10,7 +10,10 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/common-utils": {},
+    "ghcr.io/devcontainers/features/common-utils": {
+      "configureZshAsDefaultShell": true,
+      "username": "ubuntu"
+    },
     "ghcr.io/devcontainers/features/git": {}
   },
   "forwardPorts": [
