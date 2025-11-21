@@ -22,18 +22,14 @@ let package = Package(
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
                 .product(name: "Leaf", package: "leaf"),
                 .product(name: "Vapor", package: "vapor"),
-            ],
-            swiftSettings: swiftSettings
+            ]
         ),
         .testTarget(
             name: "TheEntertainmentDatabaseTests",
             dependencies: [
                 .target(name: "TheEntertainmentDatabase"),
                 .product(name: "VaporTesting", package: "vapor"),
-            ],
-            swiftSettings: swiftSettings
+            ]
         ),
     ]
 )
-
-var swiftSettings: [SwiftSetting] { [.enableUpcomingFeature("ExistentialAny")] }
