@@ -8,6 +8,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/vapor/fluent.git", exact: "4.13.0"),
+        .package(url: "https://github.com/vapor/fluent-postgres-driver.git", exact: "2.12.0"),
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", exact: "4.8.1"),
         .package(url: "https://github.com/vapor/leaf.git", exact: "4.5.1"),
         .package(url: "https://github.com/vapor/vapor.git", exact: "4.119.2"),
@@ -17,6 +18,7 @@ let package = Package(
             name: "TheEntertainmentDatabase",
             dependencies: [
                 .product(name: "Fluent", package: "fluent"),
+                .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
                 .product(name: "FluentSQLiteDriver", package: "fluent-sqlite-driver"),
                 .product(name: "Leaf", package: "leaf"),
                 .product(name: "Vapor", package: "vapor"),
